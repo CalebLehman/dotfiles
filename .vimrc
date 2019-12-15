@@ -1,7 +1,10 @@
 set nocompatible
 
 "FORMATTING
-set tabstop=4 shiftwidth=4 expandtab
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
 set textwidth=72
 
 "FUZZYFILE
