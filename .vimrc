@@ -16,6 +16,7 @@ syntax enable
 set showmatch
 set hlsearch
 set incsearch
+set number
 set relativenumber
 set list
 set listchars=tab:>-,trail:-,eol:¬
@@ -23,6 +24,7 @@ set listchars=tab:>-,trail:-,eol:¬
 "CONENIENCE
 let mapleader=','
 inoremap jk <Esc>
+inoremap <leader>` ``<ESC>i
 inoremap <leader>' ''<ESC>i
 inoremap <leader>" ""<ESC>i
 inoremap <leader>( ()<ESC>i
