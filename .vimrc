@@ -1,7 +1,8 @@
 set nocompatible
 
-"NO TABS
+"FORMATTING
 set tabstop=4 shiftwidth=4 expandtab
+set textwidth=72
 
 "FUZZYFILE
 filetype plugin on
