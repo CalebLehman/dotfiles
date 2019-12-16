@@ -22,9 +22,15 @@ set number
 set relativenumber
 set list
 set listchars=tab:>-,trail:-,eol:¬
+set showbreak=↪
+set ruler
+set foldmethod=marker
+set foldmarker={{{,}}}
 
 "CONENIENCE
 let mapleader=','
+nnoremap H ^
+nnoremap L $
 inoremap jk <Esc>
 inoremap <leader>` ``<ESC>i
 inoremap <leader>' ''<ESC>i
@@ -32,7 +38,7 @@ inoremap <leader>" ""<ESC>i
 inoremap <leader>[ []<ESC>i
 inoremap <leader>( ()<ESC>i
 inoremap <leader>{ {}<ESC>i
-noremap * *zz
+noremap * *<c-o>
 noremap # #zz
 noremap n nzz
 noremap N Nzz
@@ -43,5 +49,13 @@ noremap } }zz
 noremap { {zz
 vnoremap . :norm.
 
-"DUMB
+"MISC
 iabbr email lehman.346@osu.edu
+"Return to same line on re-open
+augroup line_return
+    au!
+        au BufReadPost *
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \     execute 'normal! g`"zvzz' |
+            \ endif
+augroup END
