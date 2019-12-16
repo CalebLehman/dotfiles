@@ -8,6 +8,8 @@ set autoindent
 set textwidth=72
 
 "FUZZYFILE
+set path+=**
+set wildmenu
 filetype plugin on
 set hidden
 
@@ -27,6 +29,7 @@ inoremap jk <Esc>
 inoremap <leader>` ``<ESC>i
 inoremap <leader>' ''<ESC>i
 inoremap <leader>" ""<ESC>i
+inoremap <leader>[ []<ESC>i
 inoremap <leader>( ()<ESC>i
 inoremap <leader>{ {}<ESC>i
 noremap * *zz
