@@ -29,7 +29,7 @@ set foldmarker={{{,}}}
 
 "CONENIENCE
 let mapleader=','
-nnoremap <TAB> %
+noremap <TAB> %
 nnoremap H ^
 nnoremap L $
 inoremap jk <Esc>
