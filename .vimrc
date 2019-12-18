@@ -53,6 +53,12 @@ vnoremap . :norm.
 "MISC
 iabbr email lehman.346@osu.edu
 "Return to same line on re-open
+"Checks that the mark for the last line you
+"were on is valid,
+"then runs a command to
+"  move to the line,
+"  unfold the surrounding fold (if any),
+"  and centers the line
 augroup line_return
     au!
         au BufReadPost *
