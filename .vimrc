@@ -45,6 +45,7 @@ noremap [[ [[zz
 noremap } }zz
 noremap { {zz
 vnoremap . :norm.
+noremap gV `[v`]
 
 "MISC
 iabbr email lehman.346@osu.edu
