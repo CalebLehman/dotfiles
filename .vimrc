@@ -34,12 +34,6 @@ noremap <TAB> %
 nnoremap H ^
 nnoremap L $
 inoremap jk <Esc>
-inoremap <leader>` ``<ESC>i
-inoremap <leader>' ''<ESC>i
-inoremap <leader>" ""<ESC>i
-inoremap <leader>[ []<ESC>i
-inoremap <leader>( ()<ESC>i
-inoremap <leader>{ {}<ESC>i
 noremap * *<c-o>
 noremap # #zz
 noremap n nzz
