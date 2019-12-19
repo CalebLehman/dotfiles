@@ -1,4 +1,5 @@
 set nocompatible
+let g:sh_noisk = 1
 
 "FORMATTING
 set expandtab
