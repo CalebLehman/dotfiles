@@ -35,7 +35,7 @@ nnoremap H ^
 nnoremap L $
 inoremap jk <Esc>
 noremap * *<c-o>
-noremap # #zz
+noremap # #<c-o>
 noremap n nzz
 noremap N Nzz
 noremap G Gzz
