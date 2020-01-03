@@ -28,6 +28,10 @@ set ruler
 set foldmethod=marker
 set foldmarker={{{,}}}
 
+"SPELL-CHECKING
+set spelllang=en_us
+nnoremap sp :set spell!<cr>
+
 "CONVENIENCE
 let mapleader=','
 noremap ; :
