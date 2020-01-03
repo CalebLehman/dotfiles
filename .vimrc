@@ -39,11 +39,6 @@ noremap * *<c-o>zz
 noremap # #<c-o>zz
 noremap n nzz
 noremap N Nzz
-noremap G Gzz
-noremap ]] ]]zz
-noremap [[ [[zz
-noremap } }zz
-noremap { {zz
 vnoremap . :norm.
 noremap gV `[v`]
 
