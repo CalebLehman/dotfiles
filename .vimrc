@@ -43,7 +43,8 @@ vnoremap . :norm.
 noremap gV `[v`]
 
 "MISC
-iabbr email lehman.346@osu.edu
+iabbr @@ lehman.346@osu.edu
+iabbr dt <c-r>=strftime("%m/%d/%Y")<cr>
 "Return to same line on re-open
 "Checks that the mark for the last line you
 "were on is valid,
