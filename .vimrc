@@ -28,7 +28,7 @@ set ruler
 set foldmethod=marker
 set foldmarker={{{,}}}
 
-"CONENIENCE
+"CONVENIENCE
 let mapleader=','
 noremap ; :
 noremap <TAB> %
