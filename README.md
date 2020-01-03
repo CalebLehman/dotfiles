@@ -1,3 +1,3 @@
-# Vim Configuration
+# Dotfile (Configuration)
 
-A Vim configuration file, I guess.
+My configuration files, I guess.
