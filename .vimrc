@@ -35,8 +35,8 @@ noremap <TAB> %
 nnoremap H ^
 nnoremap L $
 inoremap jk <Esc>
-noremap * *<c-o>
-noremap # #<c-o>
+noremap * *<c-o>zz
+noremap # #<c-o>zz
 noremap n nzz
 noremap N Nzz
 noremap G Gzz
