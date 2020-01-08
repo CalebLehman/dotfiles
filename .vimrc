@@ -32,6 +32,16 @@ set foldmarker={{{,}}}
 set spelllang=en_us
 nnoremap sp :set spell!<cr>
 
+"WINDOWS
+noremap <c-h> <c-w><c-h>
+noremap <c-j> <c-w><c-j>
+noremap <c-k> <c-w><c-k>
+noremap <c-l> <c-w><c-l>
+noremap <left>  :3wincmd <<cr>
+noremap <right> :3wincmd ><cr>
+noremap <up>    :3wincmd +<cr>
+noremap <down>  :3wincmd -<cr>
+
 "CONVENIENCE
 let mapleader=','
 noremap ; :
