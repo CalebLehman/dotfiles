@@ -33,28 +33,28 @@ set spelllang=en_us
 nnoremap sp :set spell!<cr>
 
 "WINDOWS
-noremap <c-h> <c-w><c-h>
-noremap <c-j> <c-w><c-j>
-noremap <c-k> <c-w><c-k>
-noremap <c-l> <c-w><c-l>
-noremap <left>  :3wincmd <<cr>
-noremap <right> :3wincmd ><cr>
-noremap <up>    :3wincmd +<cr>
-noremap <down>  :3wincmd -<cr>
+nnoremap <c-h> <c-w><c-h>
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-l> <c-w><c-l>
+nnoremap <left>  :3wincmd <<cr>
+nnoremap <right> :3wincmd ><cr>
+nnoremap <up>    :3wincmd +<cr>
+nnoremap <down>  :3wincmd -<cr>
 
 "CONVENIENCE
 let mapleader=','
-noremap ; :
-noremap <TAB> %
+nnoremap ; :
+nnoremap <TAB> %
 nnoremap H ^
 nnoremap L $
 inoremap jk <Esc>
-noremap * *<c-o>zz
-noremap # #<c-o>zz
-noremap n nzz
-noremap N Nzz
+nnoremap * *<c-o>zz
+nnoremap # #<c-o>zz
+nnoremap n nzz
+nnoremap N Nzz
 vnoremap . :norm.
-noremap gV `[v`]
+nnoremap gV `[v`]
 
 "MISC
 iabbr @@ lehman.346@osu.edu
