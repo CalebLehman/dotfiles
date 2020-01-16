@@ -7,6 +7,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set textwidth=72
+nnoremap tw :if &fo =~ 't' <bar> set fo-=t <bar> else <bar> set fo+=t <bar> endif<cr>
 
 "FUZZYFILE
 set path+=**
