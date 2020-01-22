@@ -28,6 +28,7 @@ set showbreak=↪
 set ruler
 set foldmethod=marker
 set foldmarker={{{,}}}
+set scrolloff=5
 
 "SPELL-CHECKING
 set spelllang=en_us
