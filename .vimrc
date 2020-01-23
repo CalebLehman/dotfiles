@@ -1,6 +1,19 @@
 set nocompatible
 let g:sh_noisk = 1
 
+"PLUGINS
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-surround'
+Plugin 'christoomey/vim-tmux-navigator'
+
+call vundle#end()
+filetype plugin on
+
 "FORMATTING
 set expandtab
 set tabstop=4
