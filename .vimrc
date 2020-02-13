@@ -29,6 +29,7 @@ filetype plugin on
 set hidden
 
 "VISUALS
+set background=dark
 syntax enable
 set showmatch
 set hlsearch
