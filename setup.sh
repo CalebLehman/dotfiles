@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# Commented setup file
+# Intended to be run in a fairly "fresh" system
+# I would mostly be worried about GNU stow not working
+# if config files already existed
 
 ### Terminal Emulator ###
 
@@ -9,7 +11,8 @@
 # happy with it.
 # I usually install it as follows (taken from https://raw.githubusercontent.com/Corwind/termite-install/master/termite-install.sh):
 
-sudo add-apt-repository ppa:dawidd0811/neofetch # necessary on some older releases
+sudo add-apt-repository -y universe
+sudo add-apt-repository -y ppa:dawidd0811/neofetch # necessary on some older releases
 sudo apt-get update -y
 sudo apt-get install -y \
 git \
@@ -52,10 +55,16 @@ cd ~/dotfiles
 ### Shell ###
 
 # I'm currently using/learning [Fish](https://fishshell.com/).
+# Also, I like powerline.
 
-sudo apt-get install -y fish powerline
+sudo apt-get install -y python-pip
+pip install powerline-status
+cp $(pip show powerline-status | grep -i locatin | cut -d' ' -f2)/powerline $HOME/.config/ -r
+
+sudo apt-get install -y fish
 cd ~/dotfiles
 stow fish
+mv ~/.bashrc ~/.bashrc.old
 stow bash # bashrc that launches fish, instead of changing default shell to fish
           # (has to do with termite setting TERM=xterm-termite, and is not a great solution)
 
@@ -66,10 +75,10 @@ stow bash # bashrc that launches fish, instead of changing default shell to fish
 # something.
 # I go ahead and try to install something with more features.
 
-sudo apt-get remove vim
-sudo add-apt-repository ppa:jonathonf/vim
+sudo apt-get remove -y vim
+sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt-get update -y
-sudo apt-get install vim-gtk3
+sudo apt-get install -y vim-gtk3
 stow vim
 # also need Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -79,8 +88,3 @@ fish -c updatevim
 
 sudo apt-get install -y tmux
 stow tmux
-
-### Haskell ###
-
-curl -sSL https://get.haskellstack.org/ | sh
-
