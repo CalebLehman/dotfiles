@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# get current working directory for session name
+if [ $# -eq 0 ]; then
+  name=$(basename $(pwd))
+else
+  name=$1
+fi
+
+# create session
+tmux new-session -s $name -d
+
+# manage first window
+tmux rename-window -t $name:0 vim
+tmux split-window -h
+tmux select-pane -t 0
+tmux resize-pane -R 30
+
+# manage second window
+tmux new-window -t $name -a -n repl
+tmux send-keys -t $name:1 "stack ghci" Enter
+
+# attach
+tmux select-window -t $name:0
+tmux attach -t $name
