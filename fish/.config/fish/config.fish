@@ -11,4 +11,6 @@ source /usr/share/powerline/bindings/fish/powerline-setup.fish
 source $HOME/.config/powerline/bindings/fish/powerline-setup.fish
 powerline-setup
 
-neofetch
+if type -q neofetch
+  neofetch
+end
