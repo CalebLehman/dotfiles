@@ -1,3 +1,3 @@
-# Dotfile (Configuration)
+# Configuration files
 
-My configuration files, I guess.
+My configuration files, to be installed with GNU Stow
