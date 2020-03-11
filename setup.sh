@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Run from ~/dotfiles
+
 # Intended to be run in a fairly "fresh" system
 # I would mostly be worried about GNU stow not working
 # if config files already existed
@@ -37,7 +39,7 @@ git clone https://github.com/thestinger/vte-ng.git
 cd vte-ng && ./autogen.sh && make && sudo make install && cd ..
 
 git clone --recursive https://github.com/thestinger/termite.git
-cd termite && make && sudo make install && cd ..
+cd termite && make && sudo make install && cd .. && rm temp -rf
 
 sudo ldconfig
 
@@ -46,11 +48,10 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 ### Configuration Files ###
 
 # I keep my configurations files in a GitHub repository.
+# Already have them if you downloaded this script.
 # I use stow to handle installing them.
 
 sudo apt-get install -y stow
-git clone git@github.com:CalebLehman/dotfiles.git ~/dotfiles
-cd ~/dotfiles
 
 ### Shell ###
 
@@ -58,11 +59,19 @@ cd ~/dotfiles
 # Also, I like powerline.
 
 sudo apt-get install -y python-pip
-pip install powerline-status
-cp $(pip show powerline-status | grep -i location | cut -d' ' -f2)/powerline $HOME/.config/ -r
+pip install --user powerline-status
+cd ${HOME}/dotfiles
+mkdir -p powerline-install/.config
+cp $(pip show powerline-status | grep -i location | cut -d' ' -f2)/powerline ${HOME}/dotfiles/powerline-install/.config/ -r
+mkdir -p powerline-install/.local/bin
+for pla in powerline powerline-config powerline-daemon powerline-lint powerline-render; do
+  mv ${HOME}/.local/bin/${pla} ${HOME}/dotfiles/powerline-install/.local/bin/.
+done
+# Still need powerline fonts; something like sudo apt-get install -y fonts-powerline
+stow powerline-install
 
 sudo apt-get install -y fish
-cd ~/dotfiles
+cd ${HOME}/dotfiles
 stow fish
 if [ -f ~/.bashrc ]; then
   mv ~/.bashrc ~/.bashrc.old
