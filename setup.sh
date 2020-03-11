@@ -9,7 +9,7 @@
 sudo add-apt-repository -y universe
 sudo add-apt-repository -y ppa:dawidd0811/neofetch # necessary on some older releases
 sudo apt-get update -y
-sude apt-get install -y curl neofetch
+sudo apt-get install -y curl neofetch
 
 ### Configuration Files ###
 
@@ -37,6 +37,7 @@ done
 stow powerline-install
 
 sudo apt-get install -y fish
+fish -c "set -U fish_user_paths $HOME/.local/bin $fish_user_paths"
 cd ${HOME}/dotfiles
 stow fish
 if [ -f ~/.bashrc ]; then
