@@ -59,12 +59,14 @@ cd ~/dotfiles
 
 sudo apt-get install -y python-pip
 pip install powerline-status
-cp $(pip show powerline-status | grep -i locatin | cut -d' ' -f2)/powerline $HOME/.config/ -r
+cp $(pip show powerline-status | grep -i location | cut -d' ' -f2)/powerline $HOME/.config/ -r
 
 sudo apt-get install -y fish
 cd ~/dotfiles
 stow fish
-mv ~/.bashrc ~/.bashrc.old
+if [ -f ~/.bashrc ]; then
+  mv ~/.bashrc ~/.bashrc.old
+fi
 stow bash # bashrc that launches fish, instead of changing default shell to fish
           # (has to do with termite setting TERM=xterm-termite, and is not a great solution)
 
