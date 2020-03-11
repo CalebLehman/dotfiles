@@ -7,7 +7,6 @@ end
 set -g fish_key_bindings custom_bindings
 
 set fish_function_path $fish_function_path "$HOME/.config/powerline/bindings/fish"
-source /usr/share/powerline/bindings/fish/powerline-setup.fish
 source $HOME/.config/powerline/bindings/fish/powerline-setup.fish
 powerline-setup
 
