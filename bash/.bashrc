@@ -118,11 +118,4 @@ fi
 
 # Start fish shell
 export PATH=${HOME}/.local/bin:${PATH}
-if [ "$TERM" = "xterm-termite" ]; then
-  export TERM="xterm-256color"
-  VTE_FILE="/etc/profile.d/vte-2.91.sh"
-  if [ -e "$VTE_FILE" ]; then
-    source "$VTE_FILE"
-  fi
-  exec fish
-fi
+exec fish
