@@ -30,13 +30,13 @@ filetype plugin on
 set hidden
 
 "VISUALS
+autocmd vimenter * colorscheme gruvbox
+set termguicolors
 set background=dark
 syntax enable
 set showmatch
-set hlsearch
-set incsearch
-set number
-set relativenumber
+set hlsearch incsearch ignorecase smartcase
+set number relativenumber
 set list
 set listchars=tab:>-,trail:-,eol:¬
 set showbreak=↪
@@ -44,18 +44,16 @@ set ruler
 set foldmethod=marker
 set foldmarker={{{,}}}
 set scrolloff=5
-autocmd vimenter * colorscheme gruvbox
-set termguicolors
 
 "USEFULL LEADER COMMANDS 
 let mapleader=' '
 set spelllang=en_us
-nnoremap <leader><leader> :let @/=''<CR>:noh<CR>
-nnoremap <leader>s :set invspell spell?<CR>
-nnoremap <leader>p :set invpaste paste?<CR>
-nnoremap <leader>r :source $MYVIMRC<CR>
-nnoremap <leader>o :vs $MYVIMRC<CR>
-nnoremap <leader>l :set invcursorline<CR>
+nnoremap <leader><leader> :let @/=''<cr>:noh<cr>
+nnoremap <leader>s :set invspell spell?<cr>
+nnoremap <leader>p :set invpaste paste?<cr>
+nnoremap <leader>r :source $MYVIMRC<cr>
+nnoremap <leader>o :vs $MYVIMRC<cr>
+nnoremap <leader>l :set invcursorline<cr>
 
 "WINDOWS
 "movement handled by vim-tmux-navigator plugin
