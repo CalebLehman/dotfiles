@@ -8,8 +8,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-surround'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin on
@@ -21,7 +21,6 @@ set shiftwidth=4
 set autoindent
 set textwidth=72
 nnoremap tw :if &fo =~ 't' <bar> set fo-=t <bar> else <bar> set fo+=t <bar> endif<cr>
-set rtp+=$HOME/.config/powerline/bindings/vim
 set laststatus=2
 
 "FUZZYFILE
@@ -45,6 +44,8 @@ set ruler
 set foldmethod=marker
 set foldmarker={{{,}}}
 set scrolloff=5
+autocmd vimenter * colorscheme gruvbox
+set termguicolors
 
 "SPELL-CHECKING
 set spelllang=en_us
@@ -59,21 +60,19 @@ nnoremap <down>  :3wincmd -<cr>
 
 "CONVENIENCE
 let mapleader=','
-nnoremap ; :
-nnoremap <TAB> %
-nnoremap H ^
-nnoremap L $
+noremap ; :
+noremap <TAB> %
+noremap H ^
+noremap L $
 inoremap jk <Esc>
 nnoremap * *<c-o>zz
 nnoremap # #<c-o>zz
 nnoremap n nzz
 nnoremap N Nzz
-vnoremap . :norm.
 nnoremap gV `[v`]
 
 "MISC
 iabbr @@ lehman.346@osu.edu
-iabbr dt <c-r>=strftime("%m/%d/%Y")<cr>
 "Return to same line on re-open
 "Checks that the mark for the last line you
 "were on is valid,
