@@ -47,9 +47,15 @@ set scrolloff=5
 autocmd vimenter * colorscheme gruvbox
 set termguicolors
 
-"SPELL-CHECKING
+"USEFULL LEADER COMMANDS 
+let mapleader=' '
 set spelllang=en_us
-nnoremap sp :set spell!<cr>
+nnoremap <leader><leader> :let @/=''<CR>:noh<CR>
+nnoremap <leader>s :set invspell spell?<CR>
+nnoremap <leader>p :set invpaste paste?<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>o :vs $MYVIMRC<CR>
+nnoremap <leader>l :set invcursorline<CR>
 
 "WINDOWS
 "movement handled by vim-tmux-navigator plugin
@@ -59,7 +65,6 @@ nnoremap <up>    :3wincmd +<cr>
 nnoremap <down>  :3wincmd -<cr>
 
 "CONVENIENCE
-let mapleader=','
 noremap ; :
 noremap <TAB> %
 noremap H ^
