@@ -33,9 +33,9 @@ set hidden
 autocmd vimenter * colorscheme gruvbox
 set termguicolors
 set background=dark
+set cursorline
 syntax enable
 set showmatch
-set hlsearch incsearch ignorecase smartcase
 set number relativenumber
 set list
 set listchars=tab:>-,trail:-,eol:¬
@@ -44,6 +44,11 @@ set ruler
 set foldmethod=marker
 set foldmarker={{{,}}}
 set scrolloff=5
+
+"SEARCHING
+set hlsearch incsearch ignorecase smartcase
+nnoremap / /\v
+vnoremap / /\v
 
 "USEFULL LEADER COMMANDS 
 let mapleader=' '
