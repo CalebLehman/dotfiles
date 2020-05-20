@@ -1,9 +1,24 @@
-# name: clearance
-# ---------------
-# Based on idan. Display the following bits on the left:
-# - Virtualenv name (if applicable, see https://github.com/adambrenecki/virtualfish)
-# - Current directory name
-# - Git branch and dirty state (if inside a git repo)
+function _vi_mode_prompt
+  # Do nothing if not in vi mode
+  if test "$fish_key_bindings" = "fish_vi_key_bindings"
+    or test "$fish_key_bindings" = "fish_hybrid_key_bindings"
+    switch $fish_bind_mode
+      case default
+        set_color --bold red
+        echo -n 'N'
+      case insert
+        set_color --bold green
+        echo -n 'I'
+      case replace_one
+        set_color --bold green
+        echo -n 'R'
+      case visual
+        set_color --bold magenta
+        echo -n 'V'
+    end
+    set_color normal
+  end
+end
 
 function _git_branch_name
   echo (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
@@ -16,6 +31,7 @@ end
 function fish_prompt
   set -l last_status $status
 
+  # Color aliases
   set -l cyan (set_color cyan)
   set -l yellow (set_color yellow)
   set -l red (set_color red)
@@ -23,19 +39,17 @@ function fish_prompt
   set -l green (set_color green)
   set -l normal (set_color normal)
 
-  set -l cwd $blue(pwd | sed "s:^$HOME:~:")
+  # Show vi mode
+  _vi_mode_prompt
+  echo -n ':'
 
-  # Output the prompt, left to right
-
-  # Add a newline before new prompts
-  echo -e ''
-
-  # Display [venvname] if in a virtualenv
+  # Show [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
       echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
   end
 
-  # Print pwd or full path
+  # Show current directory
+  set -l cwd $blue(pwd | sed "s:^$HOME:~:")
   echo -n -s $cwd $normal
 
   # Show git branch and status
@@ -57,6 +71,6 @@ function fish_prompt
 
   # Terminate with a nice prompt char
   echo -e ''
-  echo -e -n -s $prompt_color '⟩ ' $normal
+  echo -e -n -s $prompt_color '> ' $normal
 end
 
