@@ -20,3 +20,5 @@ end
 set -g check_git_status
 
 set -x DISPLAY :0.0
+set -x BROWSER '/mnt/c/Program\ Files\ \(x86\)/Mozilla\ Firefox/firefox.exe'
+
