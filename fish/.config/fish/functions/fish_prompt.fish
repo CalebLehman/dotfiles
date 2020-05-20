@@ -1,19 +1,33 @@
-function _vi_mode_prompt
+function _vi_mode_prompt_set_color
   # Do nothing if not in vi mode
   if test "$fish_key_bindings" = "fish_vi_key_bindings"
     or test "$fish_key_bindings" = "fish_hybrid_key_bindings"
     switch $fish_bind_mode
       case default
-        set_color --bold red
-        echo -n 'N'
+        set_color --bold yellow
       case insert
         set_color --bold green
-        echo -n 'I'
       case replace_one
         set_color --bold green
-        echo -n 'R'
       case visual
         set_color --bold magenta
+    end
+  end
+end
+
+function _vi_mode_prompt
+  # Do nothing if not in vi mode
+  if test "$fish_key_bindings" = "fish_vi_key_bindings"
+    or test "$fish_key_bindings" = "fish_hybrid_key_bindings"
+    _vi_mode_prompt_set_color
+    switch $fish_bind_mode
+      case default
+        echo -n 'N'
+      case insert
+        echo -n 'I'
+      case replace_one
+        echo -n 'R'
+      case visual
         echo -n 'V'
     end
     set_color normal
@@ -64,13 +78,14 @@ function fish_prompt
     echo -n -s ' · ' $git_info $normal
   end
 
-  set -l prompt_color $red
+  # Show actual "prompting" char
   if test $last_status = 0
-    set prompt_color $normal
+    _vi_mode_prompt_set_color
+    echo -e ''
+    echo -e -n -s '> ' $normal
+  else
+    echo -e ''
+    echo -e -n -s $red '> ' $normal
   end
-
-  # Terminate with a nice prompt char
-  echo -e ''
-  echo -e -n -s $prompt_color '> ' $normal
 end
 
