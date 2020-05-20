@@ -1,5 +1,6 @@
 set -g -x fish_greeting ''
 
+# Set up vi-style bindings
 function custom_bindings
   fish_vi_key_bindings
   bind -M insert -m default jk backward-char force-repaint
@@ -7,6 +8,7 @@ function custom_bindings
 end
 set -g fish_key_bindings custom_bindings
 
+# Set up conda, if available
 if type -q conda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
