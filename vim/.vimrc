@@ -30,7 +30,7 @@ filetype plugin on
 set hidden
 
 "VISUALS
-autocmd vimenter * colorscheme gruvbox
+autocmd vimenter * nested colorscheme gruvbox
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
@@ -56,6 +56,8 @@ vnoremap / /\v
 "USEFULL LEADER COMMANDS 
 let mapleader=' '
 set spelllang=en_us
+autocmd colorscheme * hi SpellBad ctermfg=red ctermbg=NONE cterm=underline
+autocmd colorscheme * hi SpellRare ctermfg=red ctermbg=NONE cterm=underline
 nnoremap <leader><leader> :let @/=''<cr>:noh<cr>
 nnoremap <leader>s :set invspell spell?<cr>
 nnoremap <leader>p :set invpaste paste?<cr>
