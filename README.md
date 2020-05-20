@@ -2,14 +2,14 @@
 
 My configuration files, to be installed with GNU Stow
 
-# Installation
+## Installation
 
 These configuration files are written to be installed with GNU Stow. The
 `setup.sh` script is POSIX script to perform the full installation on a
 new system. You can inspect the script and make manual installations
 accordingly, if you so desire.
 
-# Version Control
+## Version Control
 
 The `master` branch contains the configuration common to all
 environments. Environments which require specific configuration have
