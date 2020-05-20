@@ -7,10 +7,6 @@ function custom_bindings
 end
 set -g fish_key_bindings custom_bindings
 
-if type -q neofetch
-  neofetch
-end
-
 if type -q conda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

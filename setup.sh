@@ -21,12 +21,7 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 # Already have them if you downloaded this script.
 # I use stow to handle installing them.
 
-sudo apt-get install -y git xclip stow
-
-sudo add-apt-repository -y ppa:dawidd0811/neofetch # necessary on some older releases
-sudo apt-get update -y
-sudo apt-get install -y curl neofetch
-
+sudo apt-get install -y git xclip stow curl
 
 ### Shell ###
 
