@@ -21,3 +21,11 @@ environment-specific branch `rebases` off of that. *Hopefully,* this
 branches are on the remote, they should be maintained on a per-machine
 basis. Obviously, there is a significant possibility I have to update
 this machine-specific-configuration-strategy in the future.
+
+## WSL
+
+This branch has additional configuartions specific to my Windows
+Subsystem for Linux setup. Changes from the `master` dotfiles include:
+
+  * Setting the `DISPLAY` environment variable
+  * Setting the `BROWSER` environment variable

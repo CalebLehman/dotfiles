@@ -19,3 +19,4 @@ end
 # Set git prompt option(s)
 set -g check_git_status
 
+set -x DISPLAY :0.0
