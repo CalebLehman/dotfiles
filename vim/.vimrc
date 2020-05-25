@@ -21,7 +21,6 @@ set shiftwidth=4
 set autoindent
 set textwidth=72
 nnoremap tw :if &fo =~ 't' <bar> set fo-=t <bar> else <bar> set fo+=t <bar> endif<cr>
-set laststatus=2
 
 "FUZZYFILE
 set path+=**
@@ -47,6 +46,20 @@ set ruler
 set foldmethod=marker
 set foldmarker={{{,}}}
 set scrolloff=5
+
+"STATUS LINE
+set laststatus=2
+set statusline=
+set statusline+=%#CursorColumn#
+set statusline+=%f
+set statusline+=%#LineNr#
+set statusline+=%m
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=%y
+set statusline+=[%{&fileencoding?&fileencoding:&encoding}]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
 
 "SEARCHING
 set hlsearch incsearch ignorecase smartcase
