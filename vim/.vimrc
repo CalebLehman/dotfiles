@@ -7,10 +7,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'morhetz/gruvbox'
-
 call vundle#end()
 filetype plugin on
 
@@ -83,7 +80,10 @@ nnoremap <leader>l :set invcursorline<cr>
 nnoremap <leader>/ :vimgrep /<c-r>// %<cr>:copen<cr>
 
 "WINDOWS
-"movement handled by vim-tmux-navigator plugin
+noremap <c-h> <c-w><c-h>
+noremap <c-j> <c-w><c-j>
+noremap <c-k> <c-w><c-k>
+noremap <c-l> <c-w><c-l>
 nnoremap <left>  :3wincmd <<cr>
 nnoremap <right> :3wincmd ><cr>
 nnoremap <up>    :3wincmd +<cr>
