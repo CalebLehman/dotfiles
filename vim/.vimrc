@@ -64,8 +64,8 @@ set statusline+=\ %l:%c
 set hlsearch incsearch ignorecase smartcase
 nnoremap / /\v
 vnoremap / /\v
-command! Wrapcprevious try | cprev | catch | clast | catch | endtry
-command! Wrapcnext try | cnext | catch | cfirst | catch | endtry
+command! Wrapcprevious try <bar> cprev <bar> catch <bar> clast <bar> catch <bar> endtry
+command! Wrapcnext try <bar> cnext <bar> catch <bar> cfirst <bar> catch <bar> endtry
 nnoremap [q :Wrapcprevious<cr>
 nnoremap ]q :Wrapcnext<cr>
 
@@ -91,10 +91,10 @@ nnoremap <down>  :3wincmd -<cr>
 
 "CONVENIENCE
 noremap ; :
-noremap <TAB> %
+noremap <tab> %
 noremap H ^
 noremap L $
-inoremap jk <Esc>
+inoremap jk <esc>
 nnoremap * *<c-o>zz
 nnoremap # #<c-o>zz
 nnoremap n nzz
