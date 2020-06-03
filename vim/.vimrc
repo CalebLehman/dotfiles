@@ -76,6 +76,7 @@ nnoremap <leader>p :set invpaste paste?<cr>
 nnoremap <leader>r :source $MYVIMRC<cr>
 nnoremap <leader>o :vs $MYVIMRC<cr>
 nnoremap <leader>l :set invcursorline<cr>
+nnoremap <leader>/ :vimgrep /<c-r>// %<cr>:copen<cr>
 
 "WINDOWS
 "movement handled by vim-tmux-navigator plugin
