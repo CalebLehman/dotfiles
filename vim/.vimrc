@@ -64,6 +64,10 @@ set statusline+=\ %l:%c
 set hlsearch incsearch ignorecase smartcase
 nnoremap / /\v
 vnoremap / /\v
+command! Wrapcprevious try | cprev | catch | clast | catch | endtry
+command! Wrapcnext try | cnext | catch | cfirst | catch | endtry
+nnoremap [q :Wrapcprevious<cr>
+nnoremap ]q :Wrapcnext<cr>
 
 "USEFULL LEADER COMMANDS 
 let mapleader=' '
