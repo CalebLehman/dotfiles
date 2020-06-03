@@ -3,13 +3,12 @@ let g:sh_noisk = 1
 
 "PLUGINS
 filetype off
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 call vundle#end()
-filetype plugin on
+filetype plugin indent on
 
 "FORMATTING
 set expandtab
