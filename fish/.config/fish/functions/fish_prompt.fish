@@ -66,6 +66,9 @@ function fish_prompt
   set -l cwd $blue(pwd | sed "s:^$HOME:~:")
   echo -n -s $cwd $normal
 
+  # Show host
+  echo -n -s $green "@" (hostname) $normal
+
   # Show git branch and status
   if [ (_git_branch_name) ]
     set -l git_branch (_git_branch_name)
