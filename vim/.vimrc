@@ -14,7 +14,6 @@ filetype plugin indent on
 set expandtab
 set tabstop=4
 set shiftwidth=4
-set autoindent
 set textwidth=72
 nnoremap tw :if &fo =~ 't' <bar> set fo-=t <bar> else <bar> set fo+=t <bar> endif<cr>
 
@@ -103,7 +102,6 @@ nnoremap N Nzz
 nnoremap gV `[v`]
 
 "MISC
-iabbr @@ lehman.346@osu.edu
 "Return to same line on re-open
 "Checks that the mark for the last line you
 "were on is valid,
