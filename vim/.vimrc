@@ -80,6 +80,8 @@ nnoremap <leader>l :set invcursorline<cr>
 nnoremap <leader>/ :vimgrep /<c-r>// %<cr>:copen<cr>
 
 "WINDOWS
+set splitbelow
+set splitright
 noremap <c-h> <c-w><c-h>
 noremap <c-j> <c-w><c-j>
 noremap <c-k> <c-w><c-k>
