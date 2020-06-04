@@ -1,0 +1,33 @@
+[user]
+  email = lehman.346@osu.edu
+  name = CalebLehman
+
+[core]
+  editor = vi
+  pager = less
+
+[commit]
+  # fills commit message editor with basic template
+  template = ~/.config/git/commit_template.txt
+  # shows `git diff` output in commit message editor
+  verbose = true
+
+[color]
+  ui = auto
+
+[alias]
+  # Alias STASH (astash)
+  # typically just stash to explore branches freely
+  # and want to include all work, tracked or not
+  astash = stash push --include-untracked
+  # Alias LOG (alog)
+  # log with some options to make it more readable
+  alog = log --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(bold white)%s%C(reset) %C(dim green)(%cr)%C(reset) %C(bold blue)<%an>%Creset%C(dim red)%d'
+
+[merge]
+  # default to only allowing fast-forward merges
+  # run `git merge --ff` in case need non-trivial merge
+  ff = only
+  # includes the original state (the third part of the three-way
+  # merge)
+  conflictstyle = diff3

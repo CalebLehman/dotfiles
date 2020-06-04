@@ -8,7 +8,7 @@ vim, tmux, etc.) that I configure in my dotfiles.
 
 ## Git
 
-  * [ ] learn if there *are* useful git configurations to put in my
+  * [x] learn if there *are* useful git configurations to put in my
     dotfiles
 
 ## tmux
