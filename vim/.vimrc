@@ -76,6 +76,8 @@ nnoremap <leader>r :source $MYVIMRC<cr>
 nnoremap <leader>o :vs $MYVIMRC<cr>
 nnoremap <leader>l :set invcursorline<cr>
 nnoremap <leader>/ :vimgrep /<c-r>// %<cr>:copen<cr>
+nnoremap <expr> <leader>c ":set colorcolumn=" . virtcol('.') . "<cr>"
+nnoremap <leader>v :set colorcolumn=<cr>
 
 "WINDOWS
 set splitbelow
