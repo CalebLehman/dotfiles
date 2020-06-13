@@ -16,5 +16,5 @@ vim, tmux, etc.) that I configure in my dotfiles.
 ## Vim
 
   * [ ] location list vs quickfix list
-  * [ ] filetype plugin for filetype-specific commands
+  * [x] filetype plugin for filetype-specific commands
 
