@@ -53,3 +53,6 @@ fish -c updatevim
 sudo apt-get install -y tmux
 stow tmux
 
+### Git ###
+
+stow git
