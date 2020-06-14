@@ -53,21 +53,17 @@ function fish_prompt
   set -l green (set_color green)
   set -l normal (set_color normal)
 
-  # Show vi mode
-  _vi_mode_prompt
-  echo -n ':'
-
   # Show [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
       echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
   end
 
+  # Show user@host
+  echo -n -s $green (whoami) '@' (hostname) $normal ':'
+
   # Show current directory
   set -l cwd $blue(pwd | sed "s:^$HOME:~:")
   echo -n -s $cwd $normal
-
-  # Show host
-  echo -n -s $green "@" (hostname) $normal
 
   # Show git branch and status
   if [ (_git_branch_name) ]
@@ -81,13 +77,17 @@ function fish_prompt
     echo -n -s ' · ' $git_info $normal
   end
 
+
+  # Show vi mode
+  echo -e ''
+  _vi_mode_prompt
+  echo -n ' '
+
   # Show actual "prompting" char
   if test $last_status = 0
     _vi_mode_prompt_set_color
-    echo -e ''
     echo -e -n -s '> ' $normal
   else
-    echo -e ''
     echo -e -n -s $red '> ' $normal
   end
 end
