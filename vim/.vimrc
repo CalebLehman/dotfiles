@@ -76,6 +76,7 @@ nnoremap <leader>l :set invcursorline<cr>
 nnoremap <leader>/ :vimgrep /<c-r>// %<cr>:copen<cr>
 nnoremap <expr> <leader>c ":set colorcolumn=" . virtcol('.') . "<cr>"
 nnoremap <leader>v :set colorcolumn=<cr>
+nnoremap <leader>h :vs ~/.config/vim/cheat_sheet.md<cr>
 
 "WINDOWS
 set splitbelow
