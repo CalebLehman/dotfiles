@@ -71,12 +71,12 @@ nnoremap <leader><leader> :let @/=''<cr>:noh<cr>
 nnoremap <leader>s :set invspell spell?<cr>
 nnoremap <leader>p :set invpaste paste?<cr>
 nnoremap <leader>r :source $MYVIMRC<cr>
-nnoremap <leader>o :vs $MYVIMRC<cr>
+nnoremap <leader>o :vssplit $MYVIMRC<cr>
 nnoremap <leader>l :set invcursorline<cr>
 nnoremap <leader>/ :vimgrep /<c-r>// %<cr>:copen<cr>
 nnoremap <expr> <leader>c ":set colorcolumn=" . virtcol('.') . "<cr>"
 nnoremap <leader>v :set colorcolumn=<cr>
-nnoremap <leader>h :vs ~/.config/vim/cheat_sheet.md<cr>
+nnoremap <leader>h :split ~/.config/vim/cheat_sheet.md<cr>
 
 "WINDOWS
 set splitbelow
