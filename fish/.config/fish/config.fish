@@ -11,3 +11,6 @@ eval /home/clehman/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 end
 
+# Set git prompt option(s)
+set -g check_git_status
+
