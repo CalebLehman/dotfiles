@@ -71,7 +71,7 @@ nnoremap <leader><leader> :let @/=''<cr>:noh<cr>
 nnoremap <leader>s :set invspell spell?<cr>
 nnoremap <leader>p :set invpaste paste?<cr>
 nnoremap <leader>r :source $MYVIMRC<cr>
-nnoremap <leader>o :vssplit $MYVIMRC<cr>
+nnoremap <leader>o :vsplit $MYVIMRC<cr>
 nnoremap <leader>l :set invcursorline<cr>
 nnoremap <leader>/ :vimgrep /<c-r>// %<cr>:copen<cr>
 nnoremap <expr> <leader>c ":set colorcolumn=" . virtcol('.') . "<cr>"
