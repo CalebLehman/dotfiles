@@ -1,0 +1,10 @@
+# creates a basic latex editing session
+
+new-window -n latex
+
+select-window -t latex
+split-window -h -p 25 -t 0
+split-window -v -p 25 -t 1 'python3 -m http.server 8000'
+send-keys -t 1 'cp -n ~/.tmux/latex_Makefile Makefile' Enter
+send-keys -t 1 'vi Makefile' Enter
+select-pane -t 1

@@ -1,0 +1,10 @@
+# replace with specific list of tagets if needed
+tex-targets = $(wildcard *.tex)
+
+all:
+	pdflatex $(tex-targets)
+	pdflatex $(tex-targets)
+
+.PHONY: clean
+clean:
+	rm -rf *.pdf *.aux *.log *.pre
