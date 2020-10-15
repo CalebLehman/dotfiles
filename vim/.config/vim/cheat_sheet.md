@@ -1,7 +1,9 @@
 # Vim Cheat Sheet
 
 The stuff that I currently notice myself looking up all time of
-forgetting to use.
+forgetting to use. Ideally, this stuff will just become habit, or at
+least familiar enough that I can look it up in the Vim help system
+as-needed.
 
 ## Using external commands
 
@@ -15,3 +17,6 @@ next line
 
 `:<range>w !cmd` will run `cmd`, pass the text in `<range>` to its,
 `stdin`, and display the results
+
+Typing `!{motion}` in normal mode will pull up the Vim prompt with the
+motion translated into a range for a filter command
