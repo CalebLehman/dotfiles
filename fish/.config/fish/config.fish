@@ -1,3 +1,8 @@
+if status is-interactive
+and not set -q TMUX
+  tmux new-session -A -s main
+end
+
 set -g -x fish_greeting ''
 
 # Set up vi-style bindings
