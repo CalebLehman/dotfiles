@@ -5,6 +5,11 @@ forgetting to use. Ideally, this stuff will just become habit, or at
 least familiar enough that I can look it up in the Vim help system
 as-needed.
 
+## Editing registers
+
+`:let @<register-name>='<ctrl-r><register-name>'` will assign the
+register its current contents, which can be edited before the assignment
+
 ## Using external commands
 
 `:!cmd` will run `cmd` and display the results
