@@ -95,7 +95,6 @@ nnoremap <down>  :3wincmd -<cr>
 "CONVENIENCE
 noremap ; :
 noremap : ;
-noremap <tab> %
 noremap H ^
 noremap L $
 inoremap jk <esc>
