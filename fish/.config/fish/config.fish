@@ -19,6 +19,7 @@ end
 # Set git prompt option(s)
 set -g check_git_status
 
-set -x DISPLAY :0.0
+set -x DISPLAY (grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 set -x BROWSER '/mnt/c/Program\ Files\ \(x86\)/Mozilla\ Firefox/firefox.exe'
+set -x XDG_RUNTIME_DIR '/tmp/runtime-clehman'
 
