@@ -56,3 +56,9 @@ stow tmux
 ### Git ###
 
 stow git
+
+### GDB ###
+# I'm currently using PEDA GDB
+
+stow gdb
+git clone https://github.com/longld/peda.git ~/.gdb/peda
