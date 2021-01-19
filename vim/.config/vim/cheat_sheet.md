@@ -5,6 +5,11 @@ forgetting to use. Ideally, this stuff will just become habit, or at
 least familiar enough that I can look it up in the Vim help system
 as-needed.
 
+## Fix syntax highlighting
+
+Depending on your cursor position, file syntax highlighting can be
+messed up on open. Run `:syntax sync fromstart` to fix it.
+
 ## Editing registers
 
 `:let @<register-name>='<ctrl-r><register-name>'` will assign the
