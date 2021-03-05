@@ -7,7 +7,6 @@
 # if config files already existed
 
 sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y universe
 sudo apt-get update -y
 
 ### Configuration Files ###
@@ -15,7 +14,7 @@ sudo apt-get update -y
 # I keep my configurations files in this GitHub repository.
 # I use stow to handle installing them.
 
-sudo apt-get install -y git stow curl
+sudo apt-get install -y git stow curl build-essential
 
 ### Shell ###
 # I'm currently using/learning Fish.
