@@ -62,3 +62,13 @@ stow git
 
 stow gdb
 git clone https://github.com/longld/peda.git ~/.gdb/peda
+
+### Node ###
+
+# Check for [latest version](https://github.com/nvm-sh/nvm)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+cat > ~/.config/fish/functions/nvm.fish << 'EOF'
+function nvm
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+EOF
