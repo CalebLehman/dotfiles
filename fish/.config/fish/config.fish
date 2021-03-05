@@ -13,13 +13,8 @@ set -g fish_key_bindings custom_bindings
 if command -v nodenv 1>/dev/null 2>&1
   status --is-interactive; and source (nodenv init -|psub)
 end
-
-# Setup conda, if available
-if type -q conda
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /home/clehman/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
+if command -v pyenv 1>/dev/null 2>&1
+  status --is-interactive; and source (pyenv init -|psub)
 end
 
 # Set git prompt option(s)
