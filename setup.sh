@@ -22,9 +22,11 @@ sudo apt-get install -y git stow curl build-essential
 
 ### Text Editor ###
 # I'm currently using Vim.
-# The setup script removes the system install of Vim
-# and installs a version I know has the features I want,
-# but that might not be necessary on all platforms.
+# Sometimes the version provided by the system packages
+# doesn't have enough features.
+# There are some commented lines in the text_editor.sh
+# script that can install particular "good-enough" version
+# (or it could be built from source).
 ./setup-scripts/text_editor.sh
 
 ### Tmux ###
@@ -35,3 +37,9 @@ sudo apt-get install -y git stow curl build-essential
 
 ### Node ###
 ./setup-scripts/node.sh
+
+### Python ###
+./setup-scripts/python.sh
+
+### Ruby ###
+./setup-scripts/ruby.sh

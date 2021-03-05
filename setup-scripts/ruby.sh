@@ -8,5 +8,5 @@ set -U fish_user_paths $HOME/.rbenv/bin $fish_user_paths
 EOF
 
 # [ruby-build](https://github.com/rbenv/ruby-build)
-mkdir -p "$(rbenv root)"/plugins
-git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+mkdir -p ~/.rbenv/plugins
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build

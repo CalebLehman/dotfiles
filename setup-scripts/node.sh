@@ -8,5 +8,5 @@ set -U fish_user_paths $HOME/.nodenv/bin $fish_user_paths
 EOF
 
 # [node-build](https://github.com/nodenv/node-build)
-mkdir -p "$(nodenv root)"/plugins
-git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
+mkdir -p ~/.nodenv/plugins
+git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
