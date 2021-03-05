@@ -31,6 +31,11 @@ sudo apt-get install -y fish
 cd ${HOME}/dotfiles
 stow fish
 chsh -s $(which fish)
+# Bass helps port Bash utilities
+git clone --depth=1 git clone https://github.com/edc/bass.git ${HOME}/.config/bass
+cd ${HOME}/.config/bass
+make install
+cd ${HOME}/dotfiles
 
 ### Text Editor ###
 
