@@ -1,7 +1,7 @@
 set -g -x fish_greeting ''
 
 # Open into tmux session
-if status is-interactive
+if status --is-interactive
 and not set -q TMUX
   tmux new-session -A -s main
 end
@@ -10,7 +10,7 @@ end
 set -g fish_key_bindings custom_bindings
 
 # Setup various environment managers
-if type -q nodenv
+if command -v nodenv 1>/dev/null 2>&1
   status --is-interactive; and source (nodenv init -|psub)
 end
 
