@@ -16,6 +16,9 @@ end
 if command -v pyenv 1>/dev/null 2>&1
   status --is-interactive; and source (pyenv init -|psub)
 end
+if command -v rbenv 1>/dev/null 2>&1
+  status --is-interactive; and source (rbenv init -|psub)
+end
 
 # Set git prompt option(s)
 set -g check_git_status
