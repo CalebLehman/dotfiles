@@ -6,10 +6,15 @@ and not set -q TMUX
   tmux new-session -A -s main
 end
 
-# Set up vi-style bindings
+# Setup vi-style bindings
 set -g fish_key_bindings custom_bindings
 
-# Set up conda, if available
+# Setup various environment managers
+if type -q nodenv
+  status --is-interactive; and source (nodenv init -|psub)
+end
+
+# Setup conda, if available
 if type -q conda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
