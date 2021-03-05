@@ -1,9 +1,10 @@
+set -g -x fish_greeting ''
+
+# Open into tmux session
 if status is-interactive
 and not set -q TMUX
   tmux new-session -A -s main
 end
-
-set -g -x fish_greeting ''
 
 # Set up vi-style bindings
 set -g fish_key_bindings custom_bindings
@@ -18,4 +19,3 @@ end
 
 # Set git prompt option(s)
 set -g check_git_status
-

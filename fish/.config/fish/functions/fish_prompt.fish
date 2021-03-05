@@ -95,4 +95,3 @@ function fish_prompt
     echo -e -n -s $red '> ' $normal
   end
 end
-
