@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # [Vim](https://github.com/vim/vim)
-sudo apt-get remove -y vim
-sudo add-apt-repository -y ppa:jonathonf/vim
-sudo apt-get update -y
-sudo apt-get install -y vim-gtk3
+#sudo apt-get remove -y vim
+#sudo add-apt-repository -y ppa:jonathonf/vim
+#sudo apt-get update -y
+#sudo apt-get install -y vim-gtk3
 cd ${HOME}/dotfiles
 stow vim
 
