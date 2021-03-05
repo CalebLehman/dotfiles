@@ -1,0 +1,10 @@
+# I prefer not keeping the variables like `fish_user_paths`
+# in version control, and instead having the setup scripts manage them
+fish/.config/fish/fish_variables
+
+# Bass stuff, which is set up in setup-scripts/shell.sh
+fish/.config/fish/functions/__bass.py
+fish/.config/fish/functions/bass.fish
+
+# Vim plugin stuff, which is set up in setup-scripts/text_editor.sh
+vim/.vim/bundle/
